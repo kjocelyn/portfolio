@@ -1,3 +1,56 @@
+html, body{
+  /* height: 100%; */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 12%; */
+  /* background-color: #F2E0C9; */
+}
+
+.parallax_wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.parallax_wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background-image: url("../images/parallax.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
+
+.parallax_content {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 30px 5px 30px;
+  width: 70%;
+  /* background: white; */
+  border: 1px solid black;
+  /* border-radius: 20px; */
+}
+
+.parallax_content h1 {
+  font-size: 40px;
+}
+
+.parallax_name{
+  color: #D47C42;
+}
 header {
   display: flex;
   align-items: center;
@@ -17,6 +70,10 @@ div.header_text{
 
 img.profile_image{
   width: 100%;
+}
+
+img.profile{
+  height: 50%;
 }
 
 ul {
@@ -46,6 +103,11 @@ a.nav_item {
   color: grey;
 }
 
+a.current{
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+}
+
 a.skip {
   background: white;
   left: 0;
@@ -67,49 +129,105 @@ a:hover {
   color: black;
 }
 
-body {
-  font-family: 'Roboto';
-  margin-bottom: 12%;
-  /* background-color: #F2E0C9; */
-}
-
 h1{
   font-size: 30px;
   font-weight: 300;
   text-align: left;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 h2 {
-  text-align: center;
-  padding: 20px;
+  /* text-align: center; */
+  /* padding: 20px; */
   font-size: 25px;
 }
 
 p{
-  text-align: center;
+  /* text-align: center; */
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 65%;
+  /* height: 100%; */
+  padding-bottom: 10px;
 }
 
-footer{
-  background-color: #D9BB96;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+footer {
+  flex-shrink: 0;
+  display: flex;
+  background-color: #D47C42;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 10%;
 }
 
+.icon {
+  color: #F8F6F5;
+}
+
+.gallery_slider{
+  width: 500px;
+  text-align: center;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.gallery_slides{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery_slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.gallery_slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.gallery_slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gallery_slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: #eee;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.gallery_images {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 fieldset{
    border-radius: 10px;
    border: 2px dashed black;
-   padding: 10px;
+   padding: 20px;
    margin: 20px;
 }
 
@@ -118,8 +236,9 @@ fieldset{
   height: 200px;
 }
 
-.form-grid {
+.form_grid {
   width: 100%;
+  padding-bottom: 20px;
 }
 
 .contact{
@@ -134,21 +253,41 @@ fieldset{
   height: 200px;
 }
 
-.center {
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, 50%);
+.card_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.square-image{
-  height: 200px;
-  width: 200px;
+.card_title_container{
+  width: 80%;
+  margin: 10px;
+}
+
+.card_title{
+  padding: 0px;
+}
+.image_container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.square_image{
+  height: 100%;
+  width: 100%;
 }
 .card {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin: 10px;
+  /* padding: 20px; */
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
 
 .card:hover {
@@ -159,15 +298,74 @@ fieldset{
   padding: 2px 16px;
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border 2px solid black;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front{
+  background-color: #D9BB96;
+  color: black;
+}
+
+.flip-card-back{
+  background-color: #D9BB96;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
 .about {
   padding: 20px;
 }
 
+.overall_exp{
+  display:grid;
+  grid-template-columns: 40% auto;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: 30px;
+  padding: 40px;
+}
+
+.education_container {
+  /* padding: 20px; */
+}
+.education_grid{
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 20px;
+}
+
+.education_heading{
+}
+
+.experience_heading{
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
 .experience_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%
+  grid-column-start: 2;
 }
 .experience_grid{
   display: grid;
@@ -175,20 +373,28 @@ fieldset{
   grid-row-gap: 20px;
 }
 
+.skill_grid{
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 20px;
+}
+
 .resume_download{
   text-align:center;
-  position: absolute;
+  padding: 20px;
+  /* position: absolute;
   bottom: 15%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 
 .button_index{
-  padding: 50px;
+  text-align: center;
+  padding: 30px;
 }
 
 .button {
-  background-color: white;
+  background-color: #F8F6F5;
   color: black;
   border: 2px solid #555555;
   border-radius: 10px;
@@ -203,9 +409,8 @@ fieldset{
 }
 
 .button:hover {
-  background-color: #D9BB96;
+  background-color: #262924;
   color: white;
-  border: none;
 }
 
 
@@ -225,5 +430,23 @@ input[type=reset], input[type=submit]{
   }
   div.header_text{
     display:block;
+  }
+  img.profile{
+    height: 30%;
+    width: 30%;
+  }
+  /* .square_image{
+    height: 100%;
+    width: 30%;
+  } */
+  .image_container{
+    flex-direction: row;
+  }
+  .flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+  .form_grid {
+    width: 50%;
+    padding-bottom: 20px;
   }
 }
