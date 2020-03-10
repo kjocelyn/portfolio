@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="css/html5reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
@@ -21,11 +20,11 @@
   <a class="skip" href="#skip">Skip to Main Content</a>
   <div class="parallax_wrapper">
       <div class="parallax_content ">
-        <div class="animated slideInLeft">
-          <h1>
-            Hi, I'm <span class="parallax_name">Jocelyn Kuo</span> &#128075;
+        <div class="slideInLeft">
+          <h1 class="parallax_header">
+            Hi, I'm <span class="parallax_name retroshadow">Jocelyn Kuo</span> &#128075;
           </h1>
-          <h3>
+          <h3 class="parallax_text">
             I'm a data-driven policy student interested in bringing positive change to my community.
           </h3>
           <div class="button_index">
@@ -34,11 +33,10 @@
       </div>
     </div>
   </div>
+  <section class="container">
   <header id="about" class="header_container">
     <div class="header_logo">
-      <span class="header_image">
         <img class="profile_image" src="images/header.png" alt="img">
-      </span>
       <div class="header_text">
         <p>Jocelyn Kuo </p>
         <p> MPP/MSI Candidate 2021</p>
@@ -54,42 +52,87 @@
     </nav>
   </header>
   <main id="skip">
-    <p class="about">I'm currently working towards a <strong>Master's in Public Policy</strong> with an interest in Education Policy and a <strong>Master's in Information</strong> with focus towards Data Science.
+    <p class="about">I'm currently working towards a <strong>Master's in Public Policy</strong> with an interest in Education Policy and a <strong>Master's in Information</strong> with focus towards Data Science at the University of Michigan.
        Previously, I completed my B.A. at California State University, Long Beach, where I studied Political Science with a concentration in Global Politics. I love traveling to new places, learning about new cultures, and trying new foods.
+    </p>
+    <p class = "about"> In the future, I hope to use data to help organizations make better decisions or influence policy with evidence based research. During my free time, I love traveling to new places, learning about new cultures, and trying new foods.
     </p>
     <p class="about"> Scroll through my gallery below to see the places I've been, my friends and family, and my two orange cats, Cheezit and Cheetoz.
     </p>
     <div class="center">
       <div class="gallery_slider">
-
-
         <div class="gallery_slides">
           <div id="img1">
             <img class="gallery_images" src="images/thailand.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img9">prev</a>
+            <a class="next" href="#img2">next</a>
           </div>
           <div id="img2">
             <img class="gallery_images" src="images/travel.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img1">prev</a>
+            <a class="next" href="#img3">next</a>
           </div>
           <div id="img3">
-            <img class="gallery_images" src="images/family.jpg" alt="image">
+            <img class="gallery_images" src="images/rika.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img2">prev</a>
+            <a class="next" href="#img4">next</a>
           </div>
           <div id="img4">
-            <img class="gallery_images" src="images/friend.jpg" alt="image">
+            <img class="gallery_images flip_image" src="images/sophia.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img3">prev</a>
+            <a class="next" href="#img5">next</a>
           </div>
           <div id="img5">
             <img class="gallery_images" src="images/graduation.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img4">prev</a>
+            <a class="next" href="#img6">next</a>
           </div>
           <div id="img6">
-            <img class="gallery_images" src="images/cat1.jpg" alt="image">
+            <img class="gallery_images" src="images/strawberries.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img5">prev</a>
+            <a class="next" href="#img7">next</a>
           </div>
           <div id="img7">
-            <img class="gallery_images" src="images/cat2.jpg" alt="image">
+            <img class="gallery_images" src="images/chicago.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img6">prev</a>
+            <a class="next" href="#img8">next</a>
           </div>
           <div id="img8">
-            <img class="gallery_images" src="images/taiwan.jpg" alt="image">
+            <img class="gallery_images" src="images/cat1.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img7">prev</a>
+            <a class="next" href="#img9">next</a>
           </div>
           <div id="img9">
-            <img class="gallery_images" src="images/korea.jpg" alt="image">
+            <img class="gallery_images" src="images/cat2.jpg" alt="image">
+              <div class="caption">
+                <p>Whatever It Is - Always Awesome</p>
+              </div>
+            <a class="prev" href="#img8">prev</a>
+            <a class="next" href="#img1">next</a>
           </div>
         </div>
       </div>
@@ -97,7 +140,10 @@
   </main>
 
   <footer class="footer">
-    <div class="center"><a href="https://github.com/kjocelyn"><i class="icon fab fa-github-square fa-2x"></i></a> | <a href="https://www.linkedin.com/in/jocelyn-kuo-b14a7b82/"><i class="icon fab fa-linkedin fa-2x"></i></a></div>
-	</footer>
+    <div class="footer_text">
+      Jocelyn Kuo | Portfolio 2020
+    </div>
+  </footer>
+</section>
 </body>
 </html>

@@ -20,11 +20,10 @@
 
 <body>
   <a class="skip" href="#skip">Skip to Main Content</a>
+  <section class="container">
   <header class="header_container">
     <div class="header_logo">
-      <span class="header_image">
         <img class="profile_image" src="images/header.png" alt="img">
-      </span>
       <div class="header_text">
         <p>Jocelyn Kuo </p>
         <p> MPP/MSI Candidate 2021</p>
@@ -41,24 +40,23 @@
   </header>
 
   <main id="skip">
-    <div class="card_container">
+    <div class="project_container">
       <div class="card_title_container">
         <h1 class="card_title"> Design Projects </h1>
       </div>
-      <div class="card">
         <!-- <h2>Nishikigoi Design</h2> -->
-        <div class="image_container" tabindex="1">
-          <div class="flip-card" id="flip-card" tabindex="1">
+        <div class="image_container">
+          <div role="link" tabindex="0" class="flip-card">
             <div class= "flip-card-inner">
               <div class="flip-card-front">
                 <img class="square_image" alt = "" src="images/design2.jpg">
-            </div>
-            <div class = "flip-card-back">
+              </div>
+              <div class="flip-card-back">
               <p> The Nishikigoi logo has two koi fish swimming together to represent a network. Red and black colors were used because they are known to be koi fish colors. These two colors also demonstrate accented harmony. Logo scalability for different sizes are also shown. </p>
               </div>
             </div>
           </div>
-          <div class="flip-card">
+          <div role="link" tabindex="0" class="flip-card">
             <div class= "flip-card-inner">
               <div class="flip-card-front">
                 <img class="square_image" alt = "" src="images/design1.jpg">
@@ -68,7 +66,7 @@
               </div>
             </div>
           </div>
-          <div class="flip-card">
+          <div role="link" tabindex="0" class="flip-card">
             <div class= "flip-card-inner">
               <div class="flip-card-front">
                 <img class="square_image" alt = "" src="images/design3.jpg">
@@ -80,62 +78,59 @@
           </div>
         </div>
 
-        <div class="container">
-          <p> Software: Illustrator </p>
+        <div class="text_container">
+          <p> The purpose of this project is to raise awareness about koi fish and provide a network for those who appreciate and want to learn more about the different species.  </p>
         </div>
-        <p> The purpose of this project is to raise awareness about koi fish and provide a network for those who appreciate and want to learn more about the different species.  </p>
+      </div>
+      <div class="project_container">
+        <div class="card_title_container">
+          <h1 class="card_title"> Visualization Projects </h1>
+        </div>
+          <!-- <h2>2020 Presidential Election Insights</h2> -->
+          <div class="image_container">
+            <div role="link" tabindex="0" class="flip-card">
+              <div class= "flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="square_image" alt = "" src="images/visualization1.jpg">
+              </div>
+              <div class = "flip-card-back">
+                <p> Democrats have gained the support of most swing states with the exception of Florida and Wisconsin. </p>
+                </div>
+              </div>
+            </div>
+            <div role="link" tabindex="0" class="flip-card">
+              <div class= "flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="square_image" alt = "" src="images/visualization2.jpg">
+              </div>
+              <div class = "flip-card-back">
+                <p> In 2018 and 2019, Democrats have higher average % of support. However, in 2020, Republicans take the lead. </p>
+                </div>
+              </div>
+            </div>
+            <div role="link" tabindex="0" class="flip-card">
+              <div class= "flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="square_image" alt = "" src="images/visualization3.jpg">
+              </div>
+              <div class = "flip-card-back">
+                <p> Klobuchar's had the most extreme in 2019 out of all the candidates, hitting a low of 27% of average support and a high of 55%. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text_container">
+            <p>Using the data from FiveThirtyEight, I visualized three insights that I found with Python, specifically the Altair library. The insights were first formed using Tableau. Then, the data was cleaned, organized, and visualized.</p>
+          </div>
 
       </div>
 
-      <div class="card_title_container">
-        <h1 class="card_title"> Visualization Projects </h1>
-      </div>
-      <div class="card">
-        <!-- <h2>2020 Presidential Election Insights</h2> -->
+      <div class="project_container">
+        <div class="card_title_container">
+          <h1 class="card_title"> Consulting Projects </h1>
+        </div>
         <div class="image_container">
-          <div class="flip-card">
-            <div class= "flip-card-inner">
-              <div class="flip-card-front">
-                <img class="square_image" alt = "" src="images/visualization1.jpg">
-            </div>
-            <div class = "flip-card-back">
-              <p> Democrats have gained the support of most swing states with the exception of Florida and Wisconsin. </p>
-              </div>
-            </div>
-          </div>
-          <div class="flip-card">
-            <div class= "flip-card-inner">
-              <div class="flip-card-front">
-                <img class="square_image" alt = "" src="images/visualization2.jpg">
-            </div>
-            <div class = "flip-card-back">
-              <p> In 2018 and 2019, Democrats have higher average % of support. However, in 2020, Republicans take the lead. </p>
-              </div>
-            </div>
-          </div>
-          <div class="flip-card">
-            <div class= "flip-card-inner">
-              <div class="flip-card-front">
-                <img class="square_image" alt = "" src="images/visualization3.jpg">
-            </div>
-            <div class = "flip-card-back">
-              <p> Klobuchar's had the most extreme in 2019 out of all the candidates, hitting a low of 27% of average support and a high of 55%. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <p>Language: Python (Altair)</p>
-          <p> Using the data from FiveThirtyEight, I visualized three insights that I found with Python, specifically the Altair library. The insights were first formed using Tableau. Then, the data was cleaned, organized, and visualized.</p>
-        </div>
-      </div>
-
-      <div class="card_title_container">
-        <h1 class="card_title"> Consulting Projects </h1>
-      </div>
-      <div class = "card">
-        <div class="image_container">
-          <div class="flip-card">
+          <div role="link" tabindex="0" class="flip-card">
             <div class= "flip-card-inner">
               <div class="flip-card-front">
                 <img class="square_image" alt = "" src="images/consulting1.jpg">
@@ -146,7 +141,7 @@
               </div>
             </div>
           </div>
-          <div class="flip-card">
+          <div role="link" tabindex="0" class="flip-card">
             <div class= "flip-card-inner">
               <div class="flip-card-front">
                 <img class="square_image" alt = "" src="images/consulting2.jpg">
@@ -157,7 +152,7 @@
               </div>
             </div>
           </div>
-          <div class="flip-card">
+          <div role="link" tabindex="0" class="flip-card">
             <div class= "flip-card-inner">
               <div class="flip-card-front">
                 <img class="square_image" alt = "" src="images/consulting3.jpg">
@@ -169,14 +164,16 @@
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="text_container">
           <p>This is a consulting project done for a small business in Ann Arbor, MI. The process involved an initial meeting, stakeholder interviews & interpretations, affinity wall & analysis, brainstorming for solutions, and recommendations </p>
         </div>
       </div>
-    </div>
   </main>
   <footer class="footer">
-    <div class="center"><a href="https://github.com/kjocelyn"><i class="fab fa-github-square fa-2x"></i></a> | <a href="https://www.linkedin.com/in/jocelyn-kuo-b14a7b82/"><i class="fab fa-linkedin fa-2x"></i></a></div>
-	</footer>
+    <div class="footer_text">
+      Jocelyn Kuo | Portfolio 2020
+    </div>
+  </footer>
+  </section
 </body>
 </html>
