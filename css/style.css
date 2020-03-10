@@ -108,8 +108,8 @@ img.profile_image{
 ul {
   list-style-type: none;
   text-align: center;
-  margin: 0 px;
-  padding: 0 px;
+  margin: 0px;
+  padding: 0px;
 }
 
 ul.nav_links{
@@ -421,7 +421,7 @@ fieldset p {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border 2px solid black;
+  border: 2px solid black;
   perspective: 1000px;
   filter: contrast(120%);
 }
