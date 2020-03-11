@@ -12,7 +12,7 @@ body {
   /* background-color: #F2E0C9; */
 }
 
-.contact_body{
+.contact_body, .exp_body, .project_body{
   height: 100vh;
 }
 
