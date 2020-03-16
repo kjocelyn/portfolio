@@ -4,7 +4,7 @@ html, body{
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -141,6 +141,8 @@ a.nav_item {
 a.current{
   border-top: 1px dotted black;
   border-bottom: 1px dotted black;
+  text-transform: uppercase;
+  color: #D47C42;
 }
 
 a.skip {
@@ -278,6 +280,24 @@ footer {
   filter: contrast(110%);
 }
 
+.caption{
+  position: relative;
+  width: 600px;
+  height: 400px;
+  opacity: 1;
+  z-index: 9;
+  font-size: 20px;
+  color: white;
+}
+.caption p {
+  background-color: #F8F6F5;
+  color: black;
+  position: absolute;
+  bottom: -30px;
+  width: 50%;
+  padding: 5px;
+}
+
 .flip_image{
   transform: rotate(180deg);
 }
@@ -383,7 +403,7 @@ fieldset p {
 }
 .card_title_container{
   width: 100%;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .card_title{
@@ -416,11 +436,11 @@ fieldset p {
 } */
 
 .text_container {
-  padding: 16px 16px;
+  /* padding: 16px 16px; */
 }
 
 .text_container p {
-  margin: 10px;
+  margin: 30px 0px;
 }
 
 .flip-card {
@@ -441,6 +461,9 @@ fieldset p {
   transform-style: preserve-3d;
 }
 
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
 
 .flip-card-front, .flip-card-back{
   position: absolute;
@@ -459,8 +482,14 @@ fieldset p {
   background-color: #D9BB96;
   color: black;
   text-align: center;
-  padding: 10px;
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back p{
+  padding: 0px 15px;
 }
 
 .about {
@@ -483,7 +512,9 @@ fieldset p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
+.resume_org, .resume_date{
+  margin: 10px 0px;
+}
 .resume_download{
   text-align:center;
   padding: 20px;
@@ -492,7 +523,17 @@ fieldset p {
   left: 50%;
   transform: translateX(-50%); */
 }
+.bold {
+  font-weight: 700;
+}
 
+a.quiz{
+  text-decoration: underline;
+}
+
+.footer_text p {
+  text-align: center;
+}
 .button_index{
   text-align: center;
   padding: 30px;
@@ -522,6 +563,12 @@ fieldset p {
   text-align: center;
 }
 
+.quiz_header {
+  margin: 10px;
+}
+.email{
+  text-decoration: underline;
+}
 
 input[type=reset], input[type=submit]{
    /* border: 1px solid black; */
@@ -532,7 +579,6 @@ input[type=reset], input[type=submit]{
    -moz-box-sizing: content-box;
    box-sizing: content-box;
 }
-
 
 
 @media screen and (min-width: 768px){
@@ -548,6 +594,10 @@ input[type=reset], input[type=submit]{
   }
   ul.nav_links{
       flex-direction: row;
+  }
+
+  .about {
+      width: 70%;
   }
 
   .flip-card{
@@ -569,6 +619,15 @@ input[type=reset], input[type=submit]{
   .education_card, .experience_card, .skill_card {
     margin-top: 0px;
   }
+  .caption {
+    opacity: 0;
+    bottom: 50px;
+  }
+
+  .caption:hover, .caption:focus{
+    opacity: 1;
+  }
+
   /* .header_text{
     text-align: left;
   } */
@@ -612,10 +671,6 @@ input[type=reset], input[type=submit]{
     flex-direction: row;
   }
 
-  .flip-card:hover .flip-card-inner{
-    transform: rotateY(180deg);
-  }
-
   .flip-card:focus .flip-card-inner{
     transform: rotateY(180deg);
   }
@@ -639,27 +694,6 @@ input[type=reset], input[type=submit]{
   .social_grid{
     /* width: 50%; */
   }
-
-  .caption:hover, .caption:focus{
-    opacity: 1
-  }
-  .caption{
-    position: relative;
-    width: 600px;
-    height: 400px;
-    opacity: 0;
-    z-index: 9;
-    font-size: 20px;
-    color: white;
-  }
-  .caption p {
-    background-color: #F8F6F5;
-    color: black;
-    position: absolute;
-    bottom: 50px;
-    width: 100%
-  }
-
 }
 
 
