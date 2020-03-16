@@ -287,11 +287,11 @@ footer {
   opacity: 1;
   z-index: 9;
   font-size: 20px;
-  color: white;
+  /* color: white; */
 }
 .caption p {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   position: absolute;
   bottom: -30px;
   width: 50%;
