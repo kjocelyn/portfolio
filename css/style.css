@@ -135,7 +135,7 @@ a {
 }
 
 a.nav_item {
-  color: grey;
+  color: black;
 }
 
 a.current{
@@ -163,7 +163,11 @@ a.skip:focus{
 }
 
 a:hover {
-  color: black;
+  color: #D47C42;
+}
+
+.current:hover {
+  color: black
 }
 
 h1{
