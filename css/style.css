@@ -610,7 +610,7 @@ input[type=reset], input[type=submit]{
 
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1024px){
   header {
     display: flex;
     align-items: center;
